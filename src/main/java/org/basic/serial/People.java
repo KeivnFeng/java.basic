@@ -1,5 +1,6 @@
 package org.basic.serial;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -38,6 +39,24 @@ public class People implements Serializable{
 		
 		try{
 			FileOutputStream fos = new FileOutputStream(" perple.out");
+			oos = new ObjectOutputStream(fos);
+			oos.writeObject(p);
+			oos.close();
+			
+		}catch(Exception ex){
+			
 		}
+		
+		People pl;
+		
+		try{
+			FileInputStream fis = new FileInputStream("perple.out");
+			ois = new ObjectInputStream(fis);
+			pl = (People)ois.readObject();
+			System.out.println("name:" + pl.getName());
+			System.out.println("age:" + pl.getAge());
+			ois.close();
+		}catch(Exception ex){}
+		
 	}
 }
