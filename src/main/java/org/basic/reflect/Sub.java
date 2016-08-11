@@ -1,0 +1,8 @@
+package org.basic.reflect;
+
+public class Sub extends Base{
+
+	public void f(){
+		System.out.println("Sub");
+	}
+}
