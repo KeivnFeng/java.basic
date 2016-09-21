@@ -31,10 +31,23 @@ public class Test {
 	
 	
 	public static void main(String[] args) {
-		int resultVal = testFinally1();
+		/*int resultVal = testFinally1();
 		System.out.println(resultVal);
 		StringBuffer resultRef = testFinally2();
-		System.out.println(resultRef);
+		System.out.println(resultRef);*/
+		
+		String str = "bca";
+		switch(str){
+		case "abc":
+			System.out.println(str);
+			break;
+		case "bca":
+			System.out.println(str);
+			break;
+		default:
+			System.out.println(str);
+		
+		}
 
 	}
 
